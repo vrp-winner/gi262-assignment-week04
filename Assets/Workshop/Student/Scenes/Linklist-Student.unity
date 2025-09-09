@@ -331,7 +331,7 @@ MonoBehaviour:
   mapGenerator: {fileID: 760521284}
   energy: 0
   AttackPoint: 0
-  bodyPrefab: {fileID: 8143853981103363770, guid: c1deb6c6c00e9dc4dba654e9977bd349, type: 3}
+  bodyPrefab: {fileID: 7376014860930388078, guid: 2841ecd298f06314b97db18b8bbf7925, type: 3}
   moveInterval: 0.5
 --- !u!4 &1213437263
 Transform:

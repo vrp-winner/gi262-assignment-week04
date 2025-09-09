@@ -4,13 +4,21 @@ using UnityEngine;
 namespace Solution {
     public class Inventory : MonoBehaviour
     {
+        // ["Key": 10] ["Potion": 2] ["Sword": 1]
         public Dictionary<string, int> inventory = new Dictionary<string, int>();
 
         // เพิ่มไอเท็ม
         public void AddItem(string item, int amount)
         {
             // 1. ตรวจสอบว่ามีไอเท็มนี้ในคลังแล้วหรือยัง
-           
+            if (inventory.ContainsKey(item))
+            {
+                inventory[item] += amount;
+            }
+            else
+            {
+                inventory.Add(item, amount);
+            }
 
             Debug.Log("Added " + amount + " " + item + ". Total: " + inventory[item]);
         }
@@ -19,18 +27,32 @@ namespace Solution {
         public void RemoveItem(string item, int amount)
         {
             //4. ตรวจสอบว่ามีไอเท็มนี้ในคลังหรือไม่
-            
+            if (inventory.ContainsKey(item))
+            {
+                inventory[item] -= amount;
+                if (inventory[item] <= 0)
+                {
+                    inventory.Remove(item);
+                }
+            }
         }
         public bool HasItem(string item, int amount)
         {
             //2. ตรวจสอบว่ามีไอเท็มนี้ในคลังหรือไม่ และมีจำนวนเพียงพอหรือไม่
-            return false;
+            return inventory.ContainsKey(item) && inventory[item] >= amount;
         }
         // ตรวจสอบจำนวนไอเท็ม
         public int GetItemCount(string item)
         {
             //3. ตรวจสอบว่ามีไอเท็มนี้ในคลังหรือไม่ ถ้ามีให้คืนค่าจำนวนไอเท็มนั้น
-            return 0;
+            if (inventory.ContainsKey(item))
+            {
+                return inventory[item];
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         // แสดงรายการทั้งหมดในคลัง
