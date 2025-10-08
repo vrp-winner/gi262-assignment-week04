@@ -15,6 +15,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/7bf27dd3-564e-4458-a8bd-7369fd27385e_gi262-assignment-week05-main.zip.85e/gi262-assignment-week05-main/Assets/Scripts/Workspace/Assignment/StudentSolution.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -107,6 +110,7 @@
       <workItem from="1757505448443" duration="16000" />
       <workItem from="1757505478756" duration="10167000" />
       <workItem from="1757596148046" duration="4790000" />
+      <workItem from="1758399117068" duration="1368000" />
     </task>
     <servers />
   </component>
